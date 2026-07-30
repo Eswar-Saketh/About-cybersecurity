@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-main: #06080d;
+  --bg-card: #0d111a;
+  --bg-card-hover: #131b29;
+  --bg-glass: rgba(13, 17, 26, 0.75);
+  
+  --border-color: rgba(59, 130, 246, 0.2);
+  --border-hover: rgba(0, 240, 255, 0.5);
+
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --heading-color: #ffffff;
+
+  --accent-blue: #2563eb;
+  --accent-cyan: #00f0ff;
+  --accent-green: #10b981;
+  --accent-neon-green: #00ff88;
+
+  --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.25);
+  --glow-green: 0 0 20px rgba(0, 255, 136, 0.25);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Background Cyber Grid */
+.cyber-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(0, 255, 136, 0.05) 0%, transparent 40%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-cyan {
+  color: var(--accent-cyan);
+}
+
+.text-green {
+  color: var(--accent-neon-green);
+}
+
+.text-blue {
+  color: #60a5fa;
+}
+
+.bg-badge-blue {
+  background: rgba(37, 99, 235, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.bg-badge-green {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-neon-green);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #06080d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+}
+
+/* Glass Panels */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.glass-panel:hover {
+  border-color: var(--border-hover);
+}
+
+/* Code Block styling */
+.code-inline {
+  font-family: var(--font-mono);
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--accent-cyan);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.command-box {
+  font-family: var(--font-mono);
+  background: #090d16;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  border-left: 4px solid var(--accent-neon-green);
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: #f1f5f9;
+}
